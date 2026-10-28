@@ -1,4 +1,3 @@
-
 # AWS Terraform Simple Lab (S3 + DynamoDB)
 
 ## What this project does
@@ -92,7 +91,7 @@ terraform destroy
 
 Review the destruction plan before confirming.
 
-**Note:** S3 buckets containing objects may need to be emptied before Terraform can destroy them, depending on the configuration.
+**Note:** `hello.txt` is managed by Terraform, so `terraform destroy` deletes it before deleting the bucket. If you upload other files to the bucket manually, empty the bucket first, otherwise the bucket deletion fails.
 
 ## Learning outcomes
 
